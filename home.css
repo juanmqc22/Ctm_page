@@ -8,21 +8,26 @@
     background-color: rgb(88, 113, 146);
     transition: transform 0.2s ease-in-out;
 }
+
 .member img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
+
 .member:hover {
     transform: scale(1.1);
 }
+
 #instrutores h1 {
     color: #333;
     text-align: center;
 }
-#instrutores{
+
+#instrutores {
     background-color: bisque;
 }
+
 header {
     background-color: #333;
     color: #fff;
@@ -74,4 +79,69 @@ footer a:hover {
 footer p {
     font-size: 1.2em;
     text-decoration: underline;
+}
+
+
+
+
+/*           Suplente           */
+/* Set font family and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Style the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#busca-nome {
+    border: 2px solid #f2f2f2;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    
+}
+
+#busca-nome::placeholder {
+    color: #333;
+}
+
+/* Style the table header */
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 12px;
+}
+
+/* Style the checkbox */
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
