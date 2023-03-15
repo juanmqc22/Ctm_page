@@ -75,7 +75,7 @@ names.forEach(name => {
     row.appendChild(nameCell);
 
     // Create the checkbox cells
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         const checkboxCell = document.createElement("td");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
