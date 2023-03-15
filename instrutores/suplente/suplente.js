@@ -121,3 +121,23 @@ campoBusca.addEventListener('keyup', () => {
         }
     });
 });
+
+function enviarPorEmail() {
+    // Obtem o corpo do e-mail a partir da tabela de dados
+    const tabela = document.getElementById('name-table');
+    const corpoEmail = tabela.outerHTML;
+  
+    // Cria um link com a URL de um cliente de e-mail com o corpo do e-mail preenchido
+    const link = document.createElement('a');
+    link.href = `mailto:?subject=Dados da tabela&body=${encodeURIComponent(corpoEmail)}`;
+  
+    // Simula um clique no link para abrir o cliente de e-mail padrão do usuário
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    console.log(tabela)
+  }
+  
+  // Adiciona o evento de clique ao botão "Enviar por e-mail"
+  document.getElementById('btn-email').addEventListener('click', enviarPorEmail);
+  
