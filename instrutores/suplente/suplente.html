@@ -9,17 +9,36 @@
 </head>
 
 <body>
+    <header>
+        <link rel="stylesheet" href="/home.css">
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/instrutores/suplente/suplente.html">Suplência</a>
+            <a href="https://sites.google.com/brazil.mtc.byu.edu/ctmbrazil/in%C3%ADcio">Site CTM</a>
+            <!-- <a href="site-plan-rafting.html">Site Plan</a>
+            <a href="contactus.html">Contac Us</a> -->
+        </nav>
+    </header>
     <h1>Frequência dos Intrutores</h1>
-    <div id="busca">
-        <input type="text" id="busca-nome" placeholder="Buscar por nome">
-        <button id="btn-email">Enviar por e-mail</button>
+
+    <div id="mensagem-bloque">
+        <div id="mensagem"></div>
+        <button id="copy-button">Copy</button>
+        <button id="btn-email">Gerar relatorio</button>
+    </div>
+    <div id="nome">
+        <h3>Coloque seu nome:</h3>
+        <input required type="text" id="nome_suplente" placeholder="Nome do suplente">
+        <div id="busca">
+            <input type="text" id="busca-nome" placeholder="Buscar">
+        </div>
     </div>
     <table>
         <thead>
             <tr>
                 <th>Nome</th>
                 <th>Falta</th>
-                <th>Substituição</th>
+                <th>Pres. Ramo</th>
                 <th>Atraso</th>
                 <th>Chat</th>
                 <th>Ajudar Alguém</th>
@@ -33,3 +52,15 @@
 </body>
 
 </html>
+
+
+
+<!-- <tr>
+    <td>Irmã Albino</td>
+    <td><input type="checkbox"></td>
+    <td><input type="checkbox"></td>
+    <td><input type="checkbox"></td>
+    <td><input type="checkbox"></td>
+    <td><input type="checkbox"></td>
+    <td><input type="text"></td>
+</tr> -->

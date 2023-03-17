@@ -2,67 +2,92 @@ const table = document.getElementById("name-table");
 
 // Array of names
 var names = [
-    "Irmã Azevedo",
-    "Irmã Britto",
-    "Irmã Cillo",
-    "Irmã Jesus",
-    "Irmã Barbosa",
-    "Irmão Ferreira",
-    "Irmão Gonçalves",
-    "Irmão Maia",
-    "Irmão Zarza",
-    "Irmã Gandolfe",
-    "Irmã Vitia",
-    "Irmã Pinheiro",
-    "Irmã Pires",
-    "Irmã Ferreira",
-    "Irmã Marmelo",
-    "Irmão Costa",
-    "Irmão Fernandes",
-    "Irmã Warken",
-    "Irmã Da Silva",
-    "Irmão Hader",
-    "Irmã Domingues",
-    "Irmã Ramos",
-    "Irmão Saraiva",
-    "Irmã Moura",
-    "Irmão Morales",
-    "Irmão Diogo",
-    "Irmã Flores",
-    "Irmã Ragazzo",
-    "Irmão Murilo",
-    "Irmão Farneti",
-    "Irmã Lisbôa",
-    "Irmã Mentado",
-    "Irmã Galeno",
-    "Irmã Los",
-    "Irmã Souza",
-    "Irmã Vielma",
-    "Irmã Beatriz",
-    "Irmão Arias",
-    "Irmão Basso",
-    "Irmão Cardoza",
-    "Irmão Deivyd",
-    "Irmão Diaz",
-    "Irmão Lopes",
-    "Irmão Martin",
-    "Irmão Mentado",
-    "Irmã Albino",
-    "Irmã Soares",
-    "Irmão Almeida",
-    "Irmão Cruz",
-    "Irmã Bragança",
-    "Irmão Albuquerque",
-    "Irmão Bomfim",
-    "Irmão Cerqueira",
-    "Irmão Jara",
-    "Irmão Matos",
-    "Irmão Gaspar",
-    "Irmão Euller",
-    "Irmão Thalyson",
-    "Irmã Dos Anjos",
-    "Irmã Yegros"
+    "Fernandez: Irmã Azevedo",
+    "Fernandez: Irmã Britto",
+    "Fernandez: Irmã Cillo",
+    "Fernandez: Irmã Jesus",
+    "Fernandez: Irmã Barbosa",
+    "Fernandez: Irmão Ferreira",
+    "Fernandez: Irmão Gonçalves",
+    "Fernandez: Irmão Maia",
+    "Fernandez: Irmão Zarza",
+    "Fernandez: Irmã Gandolfe",
+    "Fernandez: Irmã Vitia",
+    "Fernandez: Irmã Pinheiro",
+    "Fernandez: Irmã Pires",
+    "De Souza: Irmã Ferreira",
+    "De Souza: Irmã Marmelo",
+    "De Souza: Irmão Costa",
+    "De Souza: Irmão Fernandes",
+    "De Souza: Irmã Warken",
+    "De Souza: Irmã Da Silva",
+    "De Souza: Irmão Hader",
+    "De Souza: Irmã Domingues",
+    "De Souza: Irmã Ramos",
+    "De Souza: Irmão Saraiva",
+    "De Souza: Irmã Moura",
+    "De Souza: Irmão Morales",
+    "De Souza: Irmão Diogo",
+    "Lira: Irmã Araujo",
+    "Lira: Irmã Diaz",
+    "Lira: Irmã Fontanez",
+    "Lira: Irmã Uchoa",
+    "Lira: Irmão Galvão",
+    "Lira: Irmão Quezada",
+    "Lira: Irmão Quintino",
+    "Lira: Irmã Paredes",
+    "Lira: Irmã Campuzano",
+    "Lira: Irmã Torres",
+    "Lira: Irmã Alencar",
+    "Lira: Irmã Baldino",
+    "Lira: Irmã Trigo",
+    "Ribeiro: Irmã Flores",
+    "Ribeiro: Irmã Ragazzo",
+    "Ribeiro: Irmão Murilo",
+    "Ribeiro: Irmão Farneti",
+    "Ribeiro: Irmã Lisbôa",
+    "Ribeiro: Irmã Mentado",
+    "Ribeiro: Irmã Galeno",
+    "Ribeiro: Irmã Los",
+    "Ribeiro: Irmã Souza",
+    "Ribeiro: Irmã Vielma",
+    "Stéfany: Irmã Beatriz",
+    "Stéfany: Irmão Arias",
+    "Stéfany: Irmão Basso",
+    "Stéfany: Irmão Cardoza",
+    "Stéfany: Irmão Deivyd",
+    "Stéfany: Irmão Diaz",
+    "Stéfany: Irmão Lopes",
+    "Stéfany: Irmão Martin",
+    "Stéfany: Irmão Mentado",
+    "Stéfany: Irmã Albino",
+    "Stéfany: Irmã Soares",
+    "Stéfany: Irmão Almeida",
+    "Stéfany: Irmão Cruz",
+    "Luz: Irmã Bragança",
+    "Luz: Irmão Albuquerque",
+    "Luz: Irmão Bomfim",
+    "Luz: Irmão Cerqueira",
+    "Luz: Irmão Jara",
+    "Luz: Irmão Matos",
+    "Luz: Irmão Gaspar",
+    "Luz: Irmão Euller",
+    "Luz: Irmão Thalyson",
+    "Luz: Irmã Dos Anjos",
+    "Luz: Irmã Yegros",
+    "Costa: Irmão Santiago",
+    "Costa: Irmão Romero",
+    "Costa: Irmão Millan",
+    "Costa: Irmão Matheus",
+    "Costa: Irmão Reis",
+    "Costa: Irmã Leviane",
+    "Costa: Irmão Caetano",
+    "Costa: Irmão Alves",
+    "Costa: Irmã Cardona",
+    "Costa: Irmão Montaño",
+    "Costa: Irmã Rocio"
 ];
+
 names.sort();
 
 names.forEach(name => {
@@ -122,31 +147,10 @@ campoBusca.addEventListener('keyup', () => {
     });
 });
 
-// function enviarPorEmail() {
-//     // Obtem o corpo do e-mail a partir da tabela de dados
-//     const tabela = document.getElementById('name-table');
-//     const corpoEmail = tabela.outerHTML;
-
-//     // Cria um link com a URL de um cliente de e-mail com o corpo do e-mail preenchido
-//     const link = document.createElement('a');
-//     link.href = `mailto:?subject=Dados da tabela&body=${encodeURIComponent(corpoEmail)}`;
-
-//     // Simula um clique no link para abrir o cliente de e-mail padrão do usuário
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-//     console.log(tabela)
-// }
-
-// Adiciona o evento de clique ao botão "Enviar por e-mail"
-// document.getElementById('btn-email').addEventListener('click', enviarPorEmail);
-
 $(document).ready(function () {
     $('#btn-email').click(function () {
-        var tableData = getTableData();
-        tableData.forEach(rowData => {
-            console.log(rowData.name + ": " + rowData.checkboxes.join(", "));
-        });
+        var lista = getTableData();
+        printTableData(lista);
     });
 });
 
@@ -156,40 +160,79 @@ function getTableData() {
         if (row !== -1) { // ignore the table header row
             var rowData = {
                 name: "",
-                checkboxes: [],
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                checkbox4: false,
+                checkbox5: false,
                 textInput: ""
             };
             $(tr).find('td').each(function (col, td) {
                 if (col === 0) {
                     rowData.name = td.textContent;
                 } else if (col >= 1 && col <= 5) {
-                    if (col === 1) {
-                        rowData.checkboxes.push($(td).find('input[type="checkbox"]').prop('checked') ? false : "Faltou");
-                    } else {
-                        const isChecked = $(td).find('input[type="checkbox"]').prop('checked');
-                        rowData.checkboxes.push(col === 1 && !isChecked ? "atraso" : isChecked);
-                    }
+                    rowData['checkbox' + col] = $(td).find('input[type="checkbox"]').prop('checked');
                 } else if (col === 6) {
                     rowData.textInput = $(td).find('input[type="text"]').val();
                 }
             });
-            if (rowData.checkboxes.includes(true)) {
-                tableData.push(rowData);
-            }
+            tableData.push(rowData);
         }
     });
     return tableData;
 }
 
+function printTableData(data) {
+    var outputDiv = document.getElementById("mensagem");
+    outputDiv.textContent = ""; // clear previous content
+    for (var i = 0; i < data.length; i++) {
+        var rowData = data[i];
+        var hasTrueCheckbox = false;
+        var trueCheckboxes = [];
+        if (rowData.checkbox1) {
+            hasTrueCheckbox = true;
+            trueCheckboxes.push("Não compareceu na abertura");
+        }
+        if (rowData.checkbox2) {
+            hasTrueCheckbox = true;
+            trueCheckboxes.push("Não escreveu na pasta dos Presidentes do ramo");
+        }
+        if (rowData.checkbox3) {
+            hasTrueCheckbox = true;
+            trueCheckboxes.push("chegou atrasado/a");
+        }
+        if (rowData.checkbox4) {
+            hasTrueCheckbox = true;
+            trueCheckboxes.push("não escreveu no chat");
+        }
+        if (rowData.checkbox5) {
+            hasTrueCheckbox = true;
+            trueCheckboxes.push("não relatou o Ajudar Alguém");
+        }
+        if (hasTrueCheckbox) {
+            var output = "Zona " + rowData.name + " - " + trueCheckboxes.join(", ");
+            if (rowData.textInput) {
+                output += " - Observações: " + rowData.textInput;
+            }
+            var p = document.createElement("p");
+            p.textContent = output;
+            outputDiv.appendChild(p);
+        }
+    }
+}
+function copyMessage() {
+    var message = document.getElementById("mensagem").innerText;
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = message.replace(/<br>/g, "\n");
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempTextArea);
+}
+
+var copyButton = document.getElementById("copy-button");
+copyButton.addEventListener("click", function () {
+    copyMessage();
+});
 
 
-
-// function areCheckboxesChecked() {
-//     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-//     checkboxes.forEach((checkbox) => {
-//         if (checkbox.checked) {
-//             console.log(checkbox.parentNode.parentNode.firstChild.textContent + " is checked");
-//         } else {
-//         }
-//     });
-// }

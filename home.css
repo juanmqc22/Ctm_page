@@ -41,19 +41,30 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Chivo Mono", monospace;
+    gap: 72px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: #333;
+    color: #30edf4;
 }
 
+nav:hover a:not(:hover) {
+    color: white;
+    opacity: 0.3;
+    filter: blur(0.8px);
+}
 
 footer {
     background-color: #333;
@@ -101,17 +112,34 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#busca-nome {
-    border: 2px solid #f2f2f2;
-    border-radius: 4px;
-    font-size: 16px;
-    padding: 10px;
-    width: 250px;
-    
+@keyframes shake {
+
+    0%,
+    100% {
+        translate: 0;
+    }
+
+    25% {
+        translate: 8px 0;
+    }
+
+    75% {
+        translate: -8px 0;
+    }
 }
+
+#nome #busca-nome {
+    width: 60%;
+    display: flex;
+    padding: 6px;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
 
 #busca-nome::placeholder {
     color: #333;
+    text-align: center;
 }
 
 /* Style the table header */
@@ -157,4 +185,83 @@ h1 {
     font-size: 16px;
     margin: 10px;
     cursor: pointer;
-  }
+}
+
+/* style for the div container */
+#nome {
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+#nome h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#nome input[type=text] {
+    padding: 8px;
+    border: 1px solid #f04747;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 45%;
+    font-size: 16px;
+    background: transparent;
+    color: #200707;
+    animation: shake 0.14s 3;
+}
+
+#nome input:valid {
+    border-color: #45feaf;
+    animation: none;
+}
+
+#nome #busca input:valid {
+    border-color: #000000;
+    animation: none;
+}
+
+#busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mensagem-bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mensagem {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#copy-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copy-button:hover {
+    background-color: #3E8E41;
+}
+
+#copy-button:active {
+    background-color: #3E8E41;
+    transform: translateY(2px);
+}
