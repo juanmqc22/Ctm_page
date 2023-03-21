@@ -36,7 +36,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+nav a #dino-img{
+    width: 20%;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -99,7 +101,7 @@ footer p {
 /* Set font family and background color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #d6cece;
 }
 
 /* Style the table */
@@ -186,6 +188,18 @@ h1 {
     margin: 10px;
     cursor: pointer;
 }
+#btn-nome {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
 
 /* style for the div container */
 #nome {
@@ -245,6 +259,7 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
+    background-color: #fff;
 }
 
 #copy-button {

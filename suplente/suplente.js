@@ -234,5 +234,27 @@ var copyButton = document.getElementById("copy-button");
 copyButton.addEventListener("click", function () {
     copyMessage();
 });
+// Get references to the necessary DOM elements
+const nomeSuplenteInput = document.getElementById("nome_suplente");
+const mensagemElement = document.getElementById("mensagem");
+const gerarRelatorioButton = document.getElementById("btn-nome");
 
+// Add a click event listener to the "Gerar relatorio" button
+gerarRelatorioButton.addEventListener("click", () => {
+    // Get the value of the "nome_suplente" input field
+    const nomeSuplente = nomeSuplenteInput.value;
 
+    if (nomeSuplente.trim() === "") {
+        alert("O nome do suplente não pode estar vazio.");
+        return;
+    }
+
+    // Create a new <p> element
+    const nomeSuplenteElement = document.createElement("p");
+
+    // Set the text content of the <p> element to the nome_suplente value
+    nomeSuplenteElement.textContent = `Relatorio feito por: ${nomeSuplente}.`;
+
+    // Append the <p> element to the mensagem element
+    mensagemElement.appendChild(nomeSuplenteElement);
+});
