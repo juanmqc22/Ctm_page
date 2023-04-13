@@ -1,0 +1,32 @@
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="received-email">Did you receive an email?</label>
+    <input type="radio" id="yes" name="received-email" value="yes" required>
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="received-email" value="no">
+    <label for="no">No</label>
+  
+    <button type="submit" onclick="submitForm(event)">Submit</button>
+  </form>
+  
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // prevent default form submission
+  
+      // get form data
+      const formData = new FormData(document.getElementById("myForm"));
+      const name = formData.get("name");
+      const receivedEmail = formData.get("received-email");
+  
+      // send data to summary page
+      const summaryUrl = "summary-page.html";
+      const params = new URLSearchParams();
+      params.append("name", name);
+      params.append("received-email", receivedEmail);
+      const url = summaryUrl + "?" + params.toString();
+      window.location.href = url;
+    }
+  </script>
+  
